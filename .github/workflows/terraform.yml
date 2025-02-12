@@ -38,7 +38,7 @@ jobs:
         if: github.ref != 'refs/heads/main'
         uses: mshick/add-pr-comment@v1
         with:
-          repo-token: ${{ secrets.GRAFANA_KEY }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: 'github-actions[bot]'
           message: |
             Applying:
