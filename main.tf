@@ -11,4 +11,5 @@ provider "grafana" {
    alias = "cloud"
 
    url   = "https://carloskar1905.grafana.net/"
+#   auth  = 
 }
