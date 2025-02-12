@@ -7,9 +7,14 @@ terraform {
    }
 }
 
+resource "github_actions_secret" "GRAFANA_KEY" {
+  repository       = "Grafana"
+  secret_name      = "GRAFANA_KEY"
+}
+
 provider "grafana" {
    alias = "cloud"
 
    url   = "https://carloskar1905.grafana.net/"
-   auth  = "sa-1-githubting-af07c7b0-df2e-429a-b051-b2c7b9ada024"
+   auth  = github_actions_secret.secret_name
 }
