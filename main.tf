@@ -7,9 +7,8 @@ terraform {
    }
 }
 resource "github_actions_secret" "grafana" {
-  repository       = "grafana"
+  repository       = "Grafana"
   secret_name      = "GRAFANA_KEY"
-  encrypted_value  = var.GRAFANA_KEY
 }
 provider "grafana" {
    alias = "cloud"
