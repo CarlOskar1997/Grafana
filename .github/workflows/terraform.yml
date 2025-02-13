@@ -9,6 +9,8 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    env:
+      TF_VAR_grafana_key: ${{ secrets.GRAFANA_KEY  }}
 
     steps:
       # Checkout the repository to the GitHub Actions runner
